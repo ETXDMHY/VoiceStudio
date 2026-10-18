@@ -70,9 +70,9 @@ env:
   REGISTRY: ghcr.io
   # Keep registry coordinates explicit. VoiceStudio is the canonical GHCR
   # path; the old path remains a compatibility alias during the migration.
-  IMAGE_NAME: debpalash/voicestudio
+  IMAGE_NAME: etxdmhy/voicestudio
   # Compatibility alias: keep existing deployments on the same tag stream.
-  LEGACY_IMAGE_NAME: debpalash/omnivoice-studio
+  LEGACY_IMAGE_NAME: etxdmhy/voicestudio
   DOCKERHUB_IMAGE: palashdeb/omnivoice-studio
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
