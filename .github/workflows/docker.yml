@@ -27,7 +27,7 @@
 #   :0.3-rocm       — major.minor floating tag, ROCm build
 #   :sha-xxxx-rocm  — specific commit SHA, ROCm build
 #
-# Images land at: ghcr.io/debpalash/voicestudio, the legacy GHCR alias
+# Images land at: ghcr.io/etxdmhy/voicestudio (fork-adjusted 2026-10-19), the legacy GHCR alias
 # ghcr.io/debpalash/omnivoice-studio, and docker.io/palashdeb/omnivoice-studio
 # (Docker Hub push gated on the DOCKERHUB_USERNAME/DOCKERHUB_TOKEN secrets;
 # if unset the build still pushes to GHCR.)
