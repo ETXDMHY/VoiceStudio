@@ -170,7 +170,7 @@ it('gives the API and container cards runnable snippets for the right endpoints 
   expect(docker).toContain('palashdeb/omnivoice-studio:stable');
   const ghcr = INTEGRATION_SETUPS['github-container-registry'].blocks('')!;
   expect(ghcr.map((block) => block.text).join('\n')).toContain(
-    'ghcr.io/debpalash/voicestudio:stable',
+    'ghcr.io/etxdmhy/voicestudio:stable',
   );
   const mcp = INTEGRATION_SETUPS['model-context-protocol'].blocks('http://127.0.0.1:3912')!;
   expect(mcp[0].text).toContain('URL: http://127.0.0.1:3912/mcp/\n');
