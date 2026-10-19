@@ -12,7 +12,7 @@ and declining or skipping it keeps them off. Set
 `-e OMNIVOICE_ANALYTICS_DISABLED=1` to switch analytics off entirely. Model
 weights download from Hugging Face when you install a model.
 
-**Official images:** [`ghcr.io/debpalash/voicestudio`](https://github.com/debpalash/VoiceStudio/pkgs/container/voicestudio)
+**Official images:** [`ghcr.io/etxdmhy/voicestudio`](https://github.com/debpalash/VoiceStudio/pkgs/container/voicestudio)
 and [`palashdeb/omnivoice-studio` on Docker Hub](https://hub.docker.com/r/palashdeb/omnivoice-studio) — same images, same tags.
 The former `ghcr.io/debpalash/omnivoice-studio` path remains a compatible alias.
 
@@ -73,13 +73,13 @@ master key.
 ## Pull and run (CPU)
 
 ```bash
-docker pull ghcr.io/debpalash/voicestudio:stable
+docker pull ghcr.io/etxdmhy/voicestudio:stable
 
 docker run -d --name omnivoice \
   -p 127.0.0.1:3900:3900 \
   -e OMNIVOICE_API_KEY="$OMNIVOICE_API_KEY" \
   -v omnivoice-data:/app/omnivoice_data \
-  ghcr.io/debpalash/voicestudio:stable
+  ghcr.io/etxdmhy/voicestudio:stable
 ```
 
 > **Docker Hub mirror:** the same images are published to
@@ -98,7 +98,7 @@ docker run -d --name omnivoice --gpus all \
   -p 127.0.0.1:3900:3900 \
   -e OMNIVOICE_API_KEY="$OMNIVOICE_API_KEY" \
   -v omnivoice-data:/app/omnivoice_data \
-  ghcr.io/debpalash/voicestudio:stable
+  ghcr.io/etxdmhy/voicestudio:stable
 ```
 
 GPU mode requires the
@@ -118,7 +118,7 @@ docker run -d --name omnivoice \
   -p 127.0.0.1:3900:3900 \
   -e OMNIVOICE_API_KEY="$OMNIVOICE_API_KEY" \
   -v omnivoice-data:/app/omnivoice_data \
-  ghcr.io/debpalash/voicestudio:stable-rocm
+  ghcr.io/etxdmhy/voicestudio:stable-rocm
 ```
 
 ### AMD GPU on WSL2
@@ -141,7 +141,7 @@ docker run -d --name omnivoice \
   -p 127.0.0.1:3900:3900 \
   -e OMNIVOICE_API_KEY="$OMNIVOICE_API_KEY" \
   -v omnivoice-data:/app/omnivoice_data \
-  ghcr.io/debpalash/voicestudio:stable-rocm
+  ghcr.io/etxdmhy/voicestudio:stable-rocm
 ```
 
 The image currently uses ROCm 7.2.x, so `HSA_ENABLE_DXG_DETECTION=1` is
@@ -184,7 +184,7 @@ The same flags work with **Podman** (`podman run --device /dev/kfd
 ```ini
 # ~/.config/containers/systemd/omnivoice.container
 [Container]
-Image=ghcr.io/debpalash/voicestudio:stable-rocm
+Image=ghcr.io/etxdmhy/voicestudio:stable-rocm
 AddDevice=/dev/kfd
 AddDevice=/dev/dri
 PublishPort=127.0.0.1:3900:3900
@@ -339,7 +339,7 @@ docker run -e OMNIVOICE_API_KEY="$OMNIVOICE_API_KEY" \
   -e OMNIVOICE_PUBLIC_API_BASE=https://api.your-host.example \
   -e OMNIVOICE_ALLOWED_ORIGINS=https://ui.your-host.example \
   -p 0.0.0.0:3900:3900 \
-  ghcr.io/debpalash/voicestudio:stable
+  ghcr.io/etxdmhy/voicestudio:stable
 ```
 
 List the UI's origin in `OMNIVOICE_ALLOWED_ORIGINS` so the API accepts its
